@@ -68,12 +68,18 @@
 
 - matplotlib 한글 설정
 ```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 from matplotlib import rcParams, font_manager, rc
 
 font_path = 'C:/Windows/Fonts/malgun.ttf'
 font = font_manager.FontProperties(fname=font_path).get_name() # 실제 설치된 폰트 이름조회
 rc('font', family=font) # 한글깨짐현상 해결!!
 rcParams['axes.unicode_minus'] = False # 한글 사용시 마이너스 표시 깨짐 해결!
+
+sns.set_style('darkgrid')
+sns.set_theme(font='Malgun Gothic', rc = {'axes.unicode_minus':False})
 ```
 
 - scikitlearn 설치
@@ -136,8 +142,25 @@ rcParams['axes.unicode_minus'] = False # 한글 사용시 마이너스 표시 �
 
 ### 데이터 전처리
 - 머신러닝/딥러닝 이전에 데이터 가공
+- [노트북](./DAY02/mldl02_데이터전처리.ipynb)
 
 ### 선형회귀
+- 회귀(Regression) : 두 변수 사이의 상관관계를 분석하는 방법
+    - 임의의 수치를 예측하는 문제
+
+- `과대적합` - overfit. 모델 훈련세트 성능이 테스트세트 성능보다 훨씬 높을때.
+- `과소적합` - underfit. 훈련세트 성능 낮거나, 테스트세트 성능이 너무 높을때.
+
+<img src="./img/ml0003.png" width=700>
+
+- K-최근접 이웃 회귀 알고리즘 문제점 확인
+- [노트북](./DAY02/mldl03_선형회귀.ipynb)
+- 선형회귀의 문제점 확인
+
+
+## 3일차
+
+### 선형회귀 중 다항회귀
 
 ### 로지스틱회귀
 

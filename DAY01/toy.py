@@ -68,6 +68,8 @@ def checkPasswordSecurity(input) :
 
 
 print(checkPasswordSecurity('1234567'))
+print(checkPasswordSecurity('tlqkf424'))
+print(checkPasswordSecurity('1q2q3q4q5q6q7q'))
 
 ## 토이프로젝트 결과
 
